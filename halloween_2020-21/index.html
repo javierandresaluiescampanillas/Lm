@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrorífica fiesta de Halloween</title>
+    <link rel="stylesheet" href="estilos/halloween.css">
+    <script src="javascripts/halloween.js">
+    </script>
+</head>
+<body onload="sonar('musicaambiental')">
+    <div id="container">
+        <audio src="sonidos/musicote.mp3" id="musicaambiental" controls>
+        </audio>
+        <audio src="sonidos/murcielago.mp3" id="murcielago">
+        </audio>
+		<audio src="sonidos/zombiemuerto.mp3" id="zombiemuerto">
+        </audio>
+        <audio src="sonidos/grito.mp3" id="grito">
+        </audio>
+        <p id="titulo">Convento del terror</p>
+        <p id="advertencia">Tocar las lápidas tendrá sus consecuencias........pero recuerda, los zombies son peligrosos, no clickes.</p>
+		<img id="mano" src="imagenes/mano.png" onclick="ocultar('mano');mostrar('consejo2');sonar('zombiemuerto')">
+		<img id="mano2" src="imagenes/mano.png" onclick="ocultar('mano2');mostrar('consejo2');sonar('zombiemuerto')">
+        <img id="bats" src="imagenes/bats.gif" width="200">
+		<img id="bats2" src="imagenes/bats.gif" width="200">
+		<img id="bats3" src="imagenes/bats.gif" width="200">
+        <div id="lapida" onmouseover="mostrar('bats');mostrar('bats2');mostrar('bats3');mostrar('mano');mostrar('mano2');sonar('murcielago')"onmouseout="ocultar('bats');ocultar('bats2');ocultar('bats3');parar('murcielago')"></div>
+		<div id="lapida2" onmouseover="mostrar('bats');mostrar('bats2');mostrar('bats3');mostrar('mano');mostrar('mano2');sonar('murcielago')"onmouseout="ocultar('bats');ocultar('bats2');ocultar('bats3');parar('murcielago')"></div>
+		<div id="lapida21" onmouseover="mostrar('bats');mostrar('bats2');mostrar('bats3');mostrar('mano');mostrar('mano2');sonar('murcielago')"onmouseout="ocultar('bats');ocultar('bats2');ocultar('bats3');parar('murcielago')"></div>
+        <div id="zombie" onclick="mostrar('bony');mostrar('consejo');ocultar('consejo2');sonar('grito');parar('musicaambiental')"></div>
+        <img id="bony" src="imagenes/bony.gif" width="180" onclick="ocultar('bony');ocultar('consejo');parar('grito')">
+		<p id="consejo">HAZ CLICK PARA ASUSTARLE!!!!!</p>
+		<p id="consejo2">Son zombies, no intentes eliminarlos, PORQUE NUNCA PODRÁS!!!!!!!</p>
+    </div>
+</body>
+</html>
